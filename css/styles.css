@@ -1,0 +1,91 @@
+@import url(./variables.css);
+@import url(./normalize.css);
+
+body {
+  background-color: var(--offBlack-color);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 24em;
+  height: 37em;
+  background-color: var(--darkGrey-color);
+  border-radius: var(--spacing-16);
+
+  /* Place main in the middle of body*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card__avatar-img {
+  width: 95px;
+  border-radius: 100%;
+  margin-top: var(--spacing-40);
+  margin-bottom: var(--spacing-);
+}
+
+.card__title {
+  font-family: var(--base-font);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-title);
+  color: var(--white-color);
+  margin-bottom: var(--spacing-14);
+}
+
+.card__location {
+  font-family: var(--base-font);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-paragraph);
+  color: var(--green-color);
+  margin-bottom: var(--spacing-24);
+}
+
+.card__description {
+  font-family: var(--base-font);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-paragraph);
+  color: var(--white-color);
+  margin-bottom: var(--spacing-24);
+}
+
+.card__linkbuttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.linkbutton {
+  font-size: var(--font-size-paragraph);
+  font-weight: var(--font-weight-bold);
+  padding: var(--spacing-18);
+  color: var(--white-color);
+  background-color: var(--grey-color);
+  border: none;
+  border-radius: 8px;
+  width: 21.4em;
+  height: 3.43em;
+  margin-bottom: var(--spacing-16);
+  transition: background-color 0.3s ease-in-out ;
+}
+
+.linkbutton:hover{
+    background-color:var(--green-color);
+    color:var(--darkGrey-color);
+    cursor: url("../img/handcursor.svg"), pointer;
+}
+
+
+@media screen and (max-width:1440px){
+  .card{
+    max-width: 97vw;
+  }
+}
